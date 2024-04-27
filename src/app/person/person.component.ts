@@ -1,4 +1,5 @@
 import { Component,EventEmitter,Input, OnInit, Output } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-person',
@@ -11,17 +12,19 @@ export class PersonComponent implements OnInit {
 @Input("apellido") lastname:string="";
 @Input("edad") age:number=0;
 
-@Output() print = new EventEmitter()
-
   constructor() { }
 
   ngOnInit() {
   }
 
-//Funcion onPrint
-onPrint(event:any)
-{
-this.print.emit("Hola")
+
+showModal(){
+  Swal.fire({
+    title: "Te llamas: "+this.name+" "+this.lastname,
+    text: "Tu edad es: "+this.age,
+    icon: "success"
+  });
+
 }
 
 
