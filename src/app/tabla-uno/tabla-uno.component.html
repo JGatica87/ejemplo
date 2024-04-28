@@ -1,0 +1,22 @@
+<table class="table table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Edad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rh of recursoHumano1">
+      <th scope="row">1</th>
+      <td>{{rh.nombre}}</td>
+      <td>{{rh.apellido}}</td>
+      <td>{{rh.edad}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="alert alert-info" role="alert">
+  El funcionario más joven es: {{masJoven1}}
+</div>

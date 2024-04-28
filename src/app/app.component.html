@@ -1,3 +1,26 @@
+<div>
+  <div class="row">
+
+    <div class="col-md-3">
+      <span class="fs-4">Recursos Humanos</span>
+      <div class="list-group">
+        <a href="#"  (click)="handleCambio(true)" class="list-group-item list-group-item-action {{fun1}}">
+          Funcionarios 1
+        </a>
+        <a href="#" (click)="handleCambio(false)" class="list-group-item list-group-item-action {{fun2}}">Funcionarios 2</a>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <app-tabla-uno *ngIf="!tabla"></app-tabla-uno>
+      <app-tabla-dos *ngIf="tabla"></app-tabla-dos>
+    </div>
+
+    </div>
+</div>
+
+
+
+<hr>
 <app-person nombre="Juan" apellido="Perez" [edad]=14></app-person>
 <app-person nombre="Pablo" apellido="Gatica" [edad]=defaultAge></app-person>
 <app-person nombre="Pedro" apellido="Rojas" [edad]=15></app-person>

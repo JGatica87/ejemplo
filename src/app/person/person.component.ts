@@ -1,6 +1,7 @@
 import { Component,EventEmitter,Input, OnInit, Output } from '@angular/core';
 import Swal from 'sweetalert2';
 
+
 @Component({
   selector: 'app-person',
   templateUrl: './person.component.html',
