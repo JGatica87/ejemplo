@@ -11,12 +11,16 @@ export class TablaUnoComponent implements OnInit {
 
   constructor() { }
 
-  public recursoHumano1:Array<RRHH> = new Array<RRHH>()
-  public masJoven1: number=0
+recursoHumano1:Array<RRHH> = []
+masJoven1:string=""
 
   ngOnInit(): void {
     this.recursoHumano1=rrhh1
+    const mJoven=this.recursoHumano1.reduce((previous,current)=>{
+      return current.edad < previous.edad ? current : previous;
+    })
 
+    this.masJoven1=mJoven.nombre+" "+mJoven.apellido
   }
 
 }

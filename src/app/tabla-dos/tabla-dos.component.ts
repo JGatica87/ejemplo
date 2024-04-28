@@ -12,11 +12,16 @@ export class TablaDosComponent implements OnInit {
 
   constructor() { }
 
-  recursoHumano2:Array<RRHH> = new Array<RRHH>()
-  public masJoven2: number=0
+  recursoHumano2:Array<RRHH> = []
+  masJoven2:string=""
 
   ngOnInit(): void {
     this.recursoHumano2=rrhh2
+    const mJoven=this.recursoHumano2.reduce((previous,current)=>{
+      return current.edad < previous.edad ? current : previous;
+    })
+
+this.masJoven2=mJoven.nombre+" "+mJoven.apellido
 
   }
 
